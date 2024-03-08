@@ -1,7 +1,7 @@
 import streamlit as st
 from module.helpers import extract_audio
 from module.openai_helpers import get_transcription, get_video_feedback
-from module.metrics import get_readability_features
+# from module.metrics import get_readability_features
 
 def page_3_transcription_only():
     # st.title('Video to Audio Converter')
@@ -20,6 +20,6 @@ def page_3_transcription_only():
         st.success('Audio has been successfully extracted.')
         st.audio(audio_path)
         st.session_state.transcript = get_transcription(audio_path)
-        readability = get_readability_features(st.session_state.transcript)
+        # readability = get_readability_features(st.session_state.transcript)
 
-        st.text_area("Transcript", value=st.session_state.transcript + '\n\n' + readability, height=150, disabled=True)
+        st.text_area("Transcript", value=st.session_state.transcript, height=150, disabled=True)
