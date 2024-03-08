@@ -1,0 +1,8 @@
+
+streamlit
+openai
+python-dotenv
+numpy
+moviepy
+PyMuPDF==1.18.19
+ffmpeg-python
